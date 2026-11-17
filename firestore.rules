@@ -1,0 +1,8 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  function signedIn() { return request.auth != null; }
+  match /students/{id} { allow read, write: if signedIn(); }
+  match /dailyRecords/{id} { allow read, create, update: if signedIn(); allow delete: if false; }
+ }
+}
