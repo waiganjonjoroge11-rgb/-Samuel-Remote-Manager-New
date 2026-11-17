@@ -28,10 +28,12 @@ import { getFirestore, collection, addDoc, getDocs, doc, setDoc, updateDoc, dele
 
 // Add the Firebase web-app settings from Firebase Console > Project settings > Your apps.
 const firebaseConfig = {
-  apiKey: "PASTE_FIREBASE_API_KEY",
-  authDomain: "PASTE_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_PROJECT_ID",
-  appId: "PASTE_FIREBASE_APP_ID"
+  apiKey: "AIzaSyDY1k8XnAEocRbO47oh_m60EA90lVqhews",
+  authDomain: "student-movement-tracker.firebaseapp.com",
+  projectId: "student-movement-tracker",
+  storageBucket: "student-movement-tracker.firebasestorage.app",
+  messagingSenderId: "766453953545",
+  appId: "1:766453953545:web:caf414891525a765a3b4d8"
 };
 const configured = !Object.values(firebaseConfig).some(v => String(v).includes("PASTE_"));
 const $ = id => document.getElementById(id);
